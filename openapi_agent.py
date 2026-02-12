@@ -134,7 +134,7 @@ NO_SPEC_FOUND"""
             print(f"\n--- Iteration {iteration + 1} ---")
 
             response = self.client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-opus-4-20250514",
                 max_tokens=4000,
                 system=system_prompt,
                 tools=tools,

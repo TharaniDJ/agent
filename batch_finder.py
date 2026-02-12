@@ -13,12 +13,17 @@ API_DOCS = [
         "docs_url": "https://docs.stripe.com/api"
     },
     {
-        "name": "GitHub",
-        "docs_url": "https://docs.github.com/en/rest"
+        "name": "Asana",
+        "docs_url": "https://developers.asana.com/docs"
     },
     {
-        "name": "OpenAI",
-        "docs_url": "https://platform.openai.com/docs/api-reference"
+        "name": "Candid Charity Check",
+        "docs_url": "https://www.guidestar.org/products/charity-check"
+    },
+
+    {
+        "name": "Discord",
+        "docs_url": "https://discord.com/developers/docs"
     },
     # Add your APIs here
 ]
