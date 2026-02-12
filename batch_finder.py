@@ -9,22 +9,9 @@ import os
 # List of API docs to monitor
 API_DOCS = [
     {
-        "name": "Stripe",
-        "docs_url": "https://docs.stripe.com/api"
-    },
-    {
-        "name": "Asana",
-        "docs_url": "https://developers.asana.com/docs"
-    },
-    {
-        "name": "Candid Charity Check",
-        "docs_url": "https://www.guidestar.org/products/charity-check"
-    },
-
-    {
-        "name": "Discord",
-        "docs_url": "https://discord.com/developers/docs"
-    },
+    "name": "Twilio",
+    "docs_url": "https://www.twilio.com/docs/api"
+    }
     # Add your APIs here
 ]
 
@@ -44,7 +31,7 @@ def batch_find_specs(output_file: str = "openapi_specs.json"):
         print(f"URL: {api['docs_url']}")
         print('='*70)
 
-        spec_url = agent.run(api['docs_url'], max_iterations=8)
+        spec_url = agent.run(api['docs_url'], max_iterations=10)
 
         result = {
             "name": api["name"],

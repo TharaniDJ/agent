@@ -88,22 +88,23 @@ class OpenAPIAgent:
 
         system_prompt = """You are an OpenAPI spec finder agent. Your goal is to find and return the direct URL to an OpenAPI specification file (JSON or YAML format).
 
-You have access to a fetch_page tool that retrieves web pages. Use it strategically to:
-1. Start at the given documentation URL
-2. Look for links to API documentation, OpenAPI specs, or Swagger files
-3. Follow promising links until you find the actual spec file URL
-4. Return the final URL when you find it
+            You have access to a fetch_page tool that retrieves web pages. Use it strategically to:
+            1. Start at the given documentation URL
+            2. Look for links to API documentation, OpenAPI specs, or Swagger files
+            3. Follow promising links until you find the actual spec file URL
+            4. IMPORTANT: Always fetch and verify the spec URL to ensure it's the LATEST version
+            5. Return the final URL when you find it
+            The spec URL typically:
+            - Ends in .json, .yaml, or .yml
+            - Contains keywords like 'openapi', 'swagger', 'api-spec'
+            - Is often at paths like /api/openapi.json, /docs/swagger.yaml, etc.
+            - Check for version indicators in URLs or page content
 
-The spec URL typically:
-- Ends in .json, .yaml, or .yml
-- Contains keywords like 'openapi', 'swagger', 'api-spec'
-- Is often at paths like /api/openapi.json, /docs/swagger.yaml, etc.
+            When you find a URL that points directly to a spec file, respond with:
+            SPEC_FOUND: <url>
 
-When you find a URL that points directly to a spec file, respond with:
-SPEC_FOUND: <url>
-
-If you determine no spec exists after thorough search, respond with:
-NO_SPEC_FOUND"""
+            If you determine no spec exists after thorough search, respond with:
+            NO_SPEC_FOUND"""
 
         tools = [
             {
