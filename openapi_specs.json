@@ -2,7 +2,7 @@
   {
     "name": "Twilio",
     "docs_url": "https://www.twilio.com/docs/api",
-    "spec_url": null,
-    "status": "not_found"
+    "spec_url": "https://raw.githubusercontent.com/twilio/twilio-oai/main/spec/json/twilio_api_v2010.json\n\nThis is the latest version of Twilio's OpenAPI 3.0 specification for their v2010 API, which is their main API version. The repository likely contains additional spec files for other Twilio services, but this is the primary OpenAPI specification URL for Twilio's core REST API.",
+    "status": "found"
   }
 ]

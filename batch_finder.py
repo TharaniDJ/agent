@@ -31,7 +31,7 @@ def batch_find_specs(output_file: str = "openapi_specs.json"):
         print(f"URL: {api['docs_url']}")
         print('='*70)
 
-        spec_url = agent.run(api['docs_url'], max_iterations=10)
+        spec_url = agent.run(api['docs_url'], max_iterations=12)
 
         result = {
             "name": api["name"],
